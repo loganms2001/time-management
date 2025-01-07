@@ -8,12 +8,12 @@ class Error(Exception):
         super().__init__(*args)
         self.dump = dump
 
-    def __str__(self):
+    def __str__(self) -> str:
         return f"{super().__str__()} (dump = {self.dump})"
     
 class SaveError(Error):
     '''
     Temp
     '''
-    def __str__(self):
+    def __str__(self) -> str:
         return f"SaveError: {super().__str__()}"
